@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Login - Muhammad Azlan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <!-- Form Login -->
+            <div id="login-form" class="form-content">
+                <h2>Masuk Akun</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Masukkan email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Kata Sandi</label>
+                        <input type="password" placeholder="Masukkan password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <p class="switch-text">Belum punya akun? <span onclick="toggleForm()">Daftar di sini</span></p>
+                </form>
+            </div>
+
+            <!-- Form Register -->
+            <div id="register-form" class="form-content hidden">
+                <h2>Daftar Akun Baru</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Masukkan email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Kata Sandi</label>
+                        <input type="password" placeholder="Buat password" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <p class="switch-text">Sudah punya akun? <span onclick="toggleForm()">Masuk di sini</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            loginForm.classList.toggle('hidden');
+            registerForm.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
